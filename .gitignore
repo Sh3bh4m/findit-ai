@@ -15,6 +15,9 @@ rules.json
 *.log
 *.zip
 *.mp4
+!media/findit-ai-synthetic-walkthrough.mp4
+*-architecture-preview.png
+*-video-contact.png
 *.xml
 *.xlsx
 *.csv
