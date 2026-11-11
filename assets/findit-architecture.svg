@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="960" viewBox="0 0 1400 960" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">FindIt AI - retrieval architecture and research boundaries</title>
+  <desc id="diagram-desc">A natural-language question enters a web assistant and a conservative route selector. Exact facts use structured retrieval, meaning-based searches use semantic retrieval with source verification, and general explanations use an LLM. A separate MCP interface exposes selected data tools. Laya is shown as shadow research and a narrowly gated pilot, not as universal production routing. Results are combined into an evidence-based answer.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c152d"/>
+      <stop offset="1" stop-color="#121d37"/>
+    </linearGradient>
+    <linearGradient id="callout" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d3151"/>
+      <stop offset="1" stop-color="#172941"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1 1 L8 4.5 L1 8" fill="none" stroke="#8ea6c6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1 1 L8 4.5 L1 8" fill="none" stroke="#56c8d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-lime" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1 1 L8 4.5 L1 8" fill="none" stroke="#a6e390" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1 1 L8 4.5 L1 8" fill="none" stroke="#c8a9ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      text {font-family: Inter, 'Segoe UI', Arial, sans-serif;}
+      .title {fill:#f5f8ff;font-size:48px;font-weight:800;letter-spacing:-1px;}
+      .subtitle {fill:#b6c7df;font-size:19px;}
+      .label {fill:#f5f8ff;font-size:24px;font-weight:700;}
+      .support {fill:#b6c7df;font-size:17px;}
+      .small {fill:#9fb6d3;font-size:15px;}
+      .flow {fill:none;stroke:#8ea6c6;stroke-width:3;stroke-linejoin:round;marker-end:url(#arrow);}
+      .dashed {fill:none;stroke:#f0b976;stroke-width:2.6;stroke-dasharray:8 8;}
+    </style>
+  </defs>
+
+  <rect width="1400" height="960" fill="url(#background)"/>
+  <circle cx="1220" cy="100" r="280" fill="#284568" opacity=".13"/>
+  <circle cx="160" cy="800" r="330" fill="#193a5b" opacity=".18"/>
+  <rect x="44" y="38" width="9" height="58" rx="4" fill="#59d0d9"/>
+  <text class="title" x="75" y="80">FindIt AI</text>
+  <text class="subtitle" x="75" y="117">Evidence-oriented assistant · structured retrieval · semantic search · MCP · Laya research</text>
+  <rect x="1113" y="47" width="224" height="37" rx="18" fill="#203751" stroke="#48657d"/>
+  <text x="1225" y="71" fill="#bceaf1" font-size="15" font-weight="700" text-anchor="middle">SANITIZED SHOWCASE</text>
+
+  <!-- Main request path -->
+  <rect x="484" y="159" width="432" height="79" rx="20" fill="#263652" stroke="#57718b"/>
+  <text x="700" y="193" class="label" text-anchor="middle">Natural-language question</text>
+  <text x="700" y="220" class="support" text-anchor="middle">From an authorized application user</text>
+  <path d="M700 239 V275" class="flow"/>
+
+  <rect x="484" y="285" width="432" height="95" rx="20" fill="#203d59" stroke="#56a8bb"/>
+  <text x="700" y="324" class="label" text-anchor="middle">Web assistant / API</text>
+  <text x="700" y="351" class="support" text-anchor="middle">Session context and authorization</text>
+  <path d="M700 381 V420" class="flow"/>
+
+  <rect x="484" y="430" width="432" height="96" rx="20" fill="#1c4560" stroke="#52c8d8" stroke-width="2"/>
+  <text x="700" y="469" class="label" text-anchor="middle">Conservative route selection</text>
+  <text x="700" y="496" class="support" text-anchor="middle">Question type + guardrails + fallback</text>
+
+  <!-- Separate tool integration -->
+  <rect x="59" y="301" width="356" height="160" rx="21" fill="url(#callout)" stroke="#7997bc" stroke-dasharray="6 6"/>
+  <text x="87" y="340" class="label">MCP tool interface</text>
+  <text x="87" y="369" class="support">Separate FastMCP server</text>
+  <text x="87" y="395" class="support">Exposes selected data tools</text>
+  <text x="87" y="430" class="small">Not the transport for every HTTP call</text>
+  <path d="M235 461 V563" stroke="#7997bc" stroke-width="2.6" stroke-dasharray="7 7" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Experimental decision-model track -->
+  <rect x="987" y="292" width="354" height="188" rx="21" fill="#2c2546" stroke="#b597df" stroke-width="2" stroke-dasharray="7 7"/>
+  <text x="1016" y="330" class="label">Laya: research track</text>
+  <text x="1016" y="359" class="support">v0.8.x: observation-only shadow</text>
+  <text x="1016" y="389" class="support">v0.9.3: narrow, gated pilot</text>
+  <text x="1016" y="421" class="small">Global active routing not established</text>
+  <rect x="1013" y="437" width="279" height="27" rx="12" fill="#51426b"/>
+  <text x="1153" y="456" fill="#edddff" font-size="14" font-weight="700" text-anchor="middle">EXPERIMENTAL · CONDITIONAL</text>
+  <path d="M987 477 H919" stroke="#c8a9ff" stroke-width="2.6" stroke-dasharray="7 7" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- Router branches -->
+  <path d="M700 526 V552 H250 V575" fill="none" stroke="#56c8d8" stroke-width="3" marker-end="url(#arrow-cyan)"/>
+  <path d="M700 526 V575" fill="none" stroke="#a6e390" stroke-width="3" marker-end="url(#arrow-lime)"/>
+  <path d="M700 552 H1150 V575" fill="none" stroke="#c8a9ff" stroke-width="3" marker-end="url(#arrow-purple)"/>
+
+  <!-- Retrieval cards -->
+  <rect x="59" y="590" width="382" height="155" rx="19" fill="#163950" stroke="#55c5dc" stroke-width="2"/>
+  <rect x="80" y="610" width="8" height="113" rx="4" fill="#56c8d8"/>
+  <text x="107" y="631" class="label">Structured retrieval</text>
+  <text x="107" y="663" class="support">Schema / filters / joins / counts</text>
+  <text x="107" y="692" class="support">Source of truth for exact data</text>
+  <text x="107" y="720" class="small">Business-system integration path</text>
+
+  <rect x="509" y="590" width="382" height="155" rx="19" fill="#203b37" stroke="#9bda87" stroke-width="2"/>
+  <rect x="530" y="610" width="8" height="113" rx="4" fill="#a6e390"/>
+  <text x="557" y="631" class="label">Semantic retrieval</text>
+  <text x="557" y="663" class="support">Embedding-based candidates</text>
+  <text x="557" y="692" class="support">Scope + live-record verification</text>
+  <text x="557" y="720" class="small">Opt-in indexed text fields</text>
+
+  <rect x="959" y="590" width="382" height="155" rx="19" fill="#332d50" stroke="#c8a9ff" stroke-width="2"/>
+  <rect x="980" y="610" width="8" height="113" rx="4" fill="#c8a9ff"/>
+  <text x="1007" y="631" class="label">LLM synthesis</text>
+  <text x="1007" y="663" class="support">Grounded summary or general Q&amp;A</text>
+  <text x="1007" y="692" class="support">Does not invent exact counts</text>
+  <text x="1007" y="720" class="small">Evidence and uncertainty retained</text>
+
+  <path d="M250 746 V780 H700 V803" class="flow"/>
+  <path d="M700 746 V803" class="flow"/>
+  <path d="M1150 746 V780 H700 V803" class="flow"/>
+
+  <rect x="484" y="817" width="432" height="73" rx="21" fill="#294c5b" stroke="#61d2c7" stroke-width="2"/>
+  <text x="700" y="847" class="label" text-anchor="middle">Evidence-based answer</text>
+  <text x="700" y="874" class="support" text-anchor="middle">Authorized facts + source freshness + caveats</text>
+
+  <text x="700" y="931" fill="#93a9c6" font-size="15" text-anchor="middle">Synthetic architecture view · No customer infrastructure, authentication material, or production datasets included</text>
+</svg>
