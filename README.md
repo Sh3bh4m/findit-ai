@@ -35,6 +35,12 @@ flowchart TD
 
 The MCP server is a separate tool-facing integration. In the reviewed code, the web API also has a **direct FileMaker data path**; the diagram does **not** claim all HTTP requests are transported over MCP.
 
+## Short video walkthrough
+
+[Watch the 38-second FindIt AI walkthrough](media/findit-ai-synthetic-walkthrough.mp4)
+
+The video is an intentionally **synthetic, silent walkthrough** of the architecture and the public reference demo output. It is not a capture of the private production console or a demonstration against real customer systems. See [how the video was made](media/README.md) for reproducibility and privacy boundaries.
+
 ## Evidence-backed implementation scope
 
 | Capability | What the reviewed implementation establishes | Disclosure |
@@ -73,6 +79,7 @@ Only Python standard-library modules are required for these exercises. The inclu
 - [Security and responsible-publication controls](docs/security.md)
 - [Testing, limitations and reproducibility](docs/evaluation.md)
 - [Release checklist](docs/release-checklist.md)
+- [Rebuild the sanitized video walkthrough](media/README.md)
 
 ## What is intentionally not included
 
