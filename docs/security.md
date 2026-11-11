@@ -2,6 +2,8 @@
 
 The original archives are **not** part of this repository. They contain environment configuration, client-specific deployment details and material inappropriate for public distribution.
 
+The [MIT license](../LICENSE) applies to the independently reconstructed public materials included here, **not** to the separate original company/client source, configurations, or data.
+
 The public code follows these basic practices:
 
 - No live service URL, credential, token, private key, employee data or client content.
