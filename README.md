@@ -89,5 +89,5 @@ Production source archives, `.env` files, service/API tokens, SSH credentials, c
 
 **Project/design:** Shubham Gopale. Original product name: **FindIt AI**. The examples in this repository were reconstructed for safe public explanation from a private implementation review. This is a portfolio demonstration, not a commercial distribution or an endorsement by any customer or employer.
 
-**License:** Not yet assigned pending the final public-release and ownership review. No permission to reuse the source is implied by repository visibility.
+**License:** [MIT](LICENSE) for the independently reconstructed, synthetic showcase and its documentation. This license does **not** cover any separate private company/client code, live deployments, data, or assets, none of which are distributed here.
 
