@@ -1,5 +1,9 @@
 # System architecture and integration boundaries
 
+![FindIt AI architecture](../assets/findit-architecture.svg)
+
+The diagram is a **conceptual, sanitized representation** of source-reviewed components and boundaries. The public runnable reference code uses synthetic records and illustrative embeddings; it does not connect to client systems.
+
 The private project brings a natural-language interaction layer to FileMaker-backed business applications. These are the components distinguished during the source review:
 
 1. **API:** A web-facing assistant receives natural language, session context, and authenticated application requests.
