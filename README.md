@@ -16,6 +16,10 @@ Laya is my decision-model track for selecting a suitable answer path. Early shad
 
 ## Architecture
 
+![FindIt AI sanitized system architecture](assets/findit-architecture.svg)
+
+*The visual distinguishes the direct assistant data path, the separate MCP tool server, and Laya's experimental status.*
+
 ```mermaid
 flowchart TD
     U["User question"] --> A["Web API / assistant"]
